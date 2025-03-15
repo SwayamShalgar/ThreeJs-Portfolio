@@ -31,7 +31,7 @@ const Hero = () => {
         <p className="sm:text-3xl text-xl font-medium  text-center font-generalsans" style={{ color: Color }}>
           Hi, I am Swayam <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Stunning Websits</p>
+        <p className="hero_tag text-gray_gradient">Building Stunning Websites</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
