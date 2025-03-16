@@ -24,6 +24,7 @@ const   Navbar = () => {
   // State to manage mobile menu visibility
   const [isOpen, setIsOpen] = useState(false);
   const { isDark, setIsDark, Color, setColor } = useDarkMode();
+  const [Imgs, setImgs] = useState("assets/menu2.png");
   
   
   const onDarkSet = () => {
@@ -41,7 +42,10 @@ const   Navbar = () => {
     )
 }
   // Function to toggle menu open/close state
-  const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
+  const toggleMenu = () =>{
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+    
+  }
   
   // Function to close the menu when a link is clicked (for mobile navigation)
   const closeMenu = () => setIsOpen(false);
@@ -64,7 +68,7 @@ const   Navbar = () => {
             onClick={toggleMenu}
             className="focus:outline-none sm:hidden flex"
             aria-label="Toggle menu">
-            <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} alt="toggle" className="w-6 h-6" />
+            <img src={isOpen ? "assets/close.svg" : isDark? "assets/menu.svg" : "assets/menu2.png"} alt="toggle" className="w-6 h-6" />
           </button>
           
           {/* Desktop Navigation - visible on larger screens */}

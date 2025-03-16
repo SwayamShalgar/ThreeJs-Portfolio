@@ -43,7 +43,7 @@ const Hero = () => {
 
             <HeroCamera isMobile={isMobile}>
               {!isDark ?
-              <LaptopTable scale={0.3} position={[-4, -8, 0]} rotation={[0.2, -Math.PI, 0]} />:
+              <LaptopTable scale={sizes.tableScale} position={sizes.tablePosition} rotation={[0.2, -Math.PI, 0]} />:
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />}
             </HeroCamera>
 
