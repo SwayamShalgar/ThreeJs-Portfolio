@@ -12,21 +12,21 @@ const DemoComputer = (props) => {
   const { nodes, materials, animations } = useGLTF('/models/computer.glb');
   const { actions } = useAnimations(animations, group);
 
-  // const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
+  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/Prj1.mp4');
 
-  // useEffect(() => {
-  //   if (txt) {
-  //     txt.flipY = false;
-  //   }
-  // }, [txt]);
+  useEffect(() => {
+    if (txt) {
+      txt.flipY = false;
+    }
+  }, [txt]);
 
-  // useGSAP(() => {
-  //   gsap.from(group.current.rotation, {
-  //     y: Math.PI / 2,
-  //     duration: 1,
-  //     ease: 'power3.out',
-  //   });
-  // }, [txt]);
+  useGSAP(() => {
+    gsap.from(group.current.rotation, {
+      y: Math.PI / 2,
+      duration: 1,
+      ease: 'power3.out',
+    });
+  }, [txt]);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -40,7 +40,7 @@ const DemoComputer = (props) => {
           position={[0.127, 1.831, 0.511]}
           rotation={[1.571, -0.005, 0.031]}
           scale={[0.661, 0.608, 0.401]}>
-          {/* <meshBasicMaterial map={txt} toneMapped={false} /> */}
+          <meshBasicMaterial map={txt} toneMapped={false} />
           <meshBasicMaterial toneMapped={false} />
         </mesh>
         <group name="RootNode" position={[0, 1.093, 0]} rotation={[-Math.PI / 2, 0, -0.033]} scale={0.045}>
