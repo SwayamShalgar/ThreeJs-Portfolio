@@ -62,7 +62,7 @@ export const myProjects = [
     desc: 'A real-time platform where multiple developers can code together simultaneously. It enables live editing, instant collaboration, and seamless code sharing, making teamwork faster and more efficient.',
     subdesc:
       'Developers can write, edit, and debug code together in real time with synchronized updates, syntax highlighting, and easy sharing, ensuring smooth and productive collaboration from anywhere.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+    href: 'https://github.com/SwayamShalgar/Code_Colab',
     texture: '/textures/project/Prj1.mp4',
     logo: '/assets/project-logo2.png',
     logoStyle: {
@@ -99,7 +99,7 @@ export const myProjects = [
     desc: 'A platform that alerts registered volunteers during disaster events by sending real-time notifications with the exact location of the occurrence. It helps mobilize helpers quickly, ensuring faster and more organized disaster response.',
     subdesc:
       'Volunteers receive instant alerts with live location details, enabling timely assistance, coordinated efforts, and effective disaster management.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+    href: 'https://rescue-connect-three.vercel.app/',
     texture: '/textures/project/project2.mp4',
     logo: '/assets/project-logo2.png',
     logoStyle: {
