@@ -1,10 +1,17 @@
 import React from 'react'
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useRef, useEffect } from 'react'
+import { useGLTF, useVideoTexture } from '@react-three/drei'
 
 export function LaptopTable(props) {
   const { nodes, materials } = useGLTF('/models/pc_setup_with_gaming_chair.glb')
+  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/Prj1.mp4');
+
+  useEffect(() => {
+    if (txt) {
+      txt.flipY = false;
+    }
+  }, [txt]);
   
   return (
     <group {...props} dispose={null}>
@@ -188,8 +195,9 @@ export function LaptopTable(props) {
             castShadow
             receiveShadow
             geometry={nodes.Monitor_wallpaperScreen_0.geometry}
-            material={materials.wallpaperScreen}
-          />
+            material={materials.wallpaperScreen}>
+            <meshBasicMaterial map={txt} toneMapped={false} />
+          </mesh>
           <mesh
             castShadow
             receiveShadow

@@ -8,7 +8,6 @@ import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
 import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
@@ -43,12 +42,16 @@ const Hero = () => {
 
             <HeroCamera isMobile={isMobile}>
               {!isDark ?
-              <LaptopTable scale={sizes.tableScale} position={sizes.tablePosition} rotation={[0.2, -Math.PI, 0]} />:
+              <LaptopTable 
+                scale={sizes.tableScale} 
+                position={sizes.tablePosition} 
+                rotation={[0.2, -Math.PI, 0]} 
+                texture="/textures/project/Prj1.mp4"
+              />:
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />}
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
               {/* <Rings position={sizes.ringPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} />
